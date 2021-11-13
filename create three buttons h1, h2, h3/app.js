@@ -33,8 +33,8 @@ output.innerText=result;
 
 h3.addEventListener('click', heading3)
 function heading3() {
-    textsize=18.2;
-    inputtext.style.fontSize=`${textsize}px`;
+   
+    inputtext.style.fontSize="18.2px"
    
     let result= inputtext.value;
     
