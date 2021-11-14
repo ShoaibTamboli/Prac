@@ -1,12 +1,12 @@
 let user1={
     name: "Ram",
-    age: "51", 
+    age: 21, 
      yuga: "Treta"
 }
 
 let user2={
     name: "Krishna",
-    age: "31", 
+    age: 31, 
      yuga: "Dwapar" 
 }
 
