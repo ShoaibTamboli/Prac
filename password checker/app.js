@@ -12,10 +12,14 @@ function passwordvalidate() {
 var passlength=password.value.length;
 
     if(passlength>10){
+        password.style.color="green"
+      
         btn.disabled=false;
         lengthmsg.innerText="Strong password"
         lengthmsg.style.color="DarkGreen"
     }else{
+        password.style.color="red"
+      
         btn.disabled=true;
         lengthmsg.innerText="password length must be atleast 10 characters long."
         lengthmsg.style.color="Red"
