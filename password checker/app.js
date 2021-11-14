@@ -4,16 +4,14 @@ let btn=document.getElementById("btn")
 let msg=document.getElementById("msg");
 let lengthmsg=document.getElementById("lengthmsg")
 
-
 password.addEventListener('input', passwordvalidate)
 
-
 function passwordvalidate() {
+
 var passlength=password.value.length;
 
-    if(passlength>10){
+    if(passlength>10 ){
         password.style.color="green"
-      
         btn.disabled=false;
         lengthmsg.innerText="Strong password"
         lengthmsg.style.color="DarkGreen"
@@ -25,8 +23,32 @@ var passlength=password.value.length;
         lengthmsg.style.color="Red"
     }
 
-  
 }
+
+
+
+
+repassword.addEventListener('input', repasswordvalidate)
+function repasswordvalidate() {
+
+    var repasslength=repassword.value.length;
+    
+        if(repasslength>10 ){
+            repassword.style.color="green"
+            btn.disabled=false;
+            lengthmsg.innerText="Strong password"
+            lengthmsg.style.color="DarkGreen"
+        }else{
+            repassword.style.color="red"
+          console.log("still not matched")
+            btn.disabled=true;
+            lengthmsg.innerText="password length must be atleast 10 characters long."
+            lengthmsg.style.color="Red"
+        }
+    
+    }
+
+
 
 btn.addEventListener('click', validatepassword)
 
