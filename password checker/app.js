@@ -3,6 +3,7 @@ let repassword=document.getElementById("repassword");
 let btn=document.getElementById("btn")
 let msg=document.getElementById("msg");
 let lengthmsg=document.getElementById("lengthmsg")
+btn.disabled=true
 
 password.addEventListener('input', passwordvalidate)
 
@@ -27,7 +28,6 @@ var passlength=password.value.length;
 
 
 
-
 repassword.addEventListener('input', repasswordvalidate)
 function repasswordvalidate() {
 
@@ -40,7 +40,7 @@ function repasswordvalidate() {
             lengthmsg.style.color="DarkGreen"
         }else{
             repassword.style.color="red"
-          console.log("still not matched")
+        
             btn.disabled=true;
             lengthmsg.innerText="password length must be atleast 10 characters long."
             lengthmsg.style.color="Red"
